@@ -1,6 +1,8 @@
-#include "GUI.h"
+//	Далее включаем в программу заголовочные файлы
+#include "GUI.h"		//	GUI.h - заголовочный файл графического интерфейса программы
 #include <windows.h>
 
+//	Используем пространоство имен Pico9400 для предоставления доступа к области для идентификаторов внутри нее
 using namespace Pico9400;
 
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
