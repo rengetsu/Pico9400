@@ -5,6 +5,7 @@
 //	Используем пространоство имен Pico9400 для предоставления доступа к области для идентификаторов внутри нее
 using namespace Pico9400;
 
+//	Вызываем макрос, вызываемый объект очищает стек
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	Application::EnableVisualStyles;
 	Application::SetCompatibleTextRenderingDefault(false);
