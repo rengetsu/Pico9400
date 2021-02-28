@@ -55,6 +55,7 @@ namespace Pico9400 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GUI::typeid));
 			this->downMenu_ChannelsButton = (gcnew System::Windows::Forms::Button());
 			this->downMenu_AcquireButton = (gcnew System::Windows::Forms::Button());
 			this->downMenu_TriggerButton = (gcnew System::Windows::Forms::Button());
@@ -63,38 +64,50 @@ namespace Pico9400 {
 			// 
 			// downMenu_ChannelsButton
 			// 
-			this->downMenu_ChannelsButton->Location = System::Drawing::Point(192, 476);
+			this->downMenu_ChannelsButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"downMenu_ChannelsButton.Image")));
+			this->downMenu_ChannelsButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->downMenu_ChannelsButton->Location = System::Drawing::Point(184, 476);
 			this->downMenu_ChannelsButton->Name = L"downMenu_ChannelsButton";
-			this->downMenu_ChannelsButton->Size = System::Drawing::Size(75, 23);
+			this->downMenu_ChannelsButton->Size = System::Drawing::Size(79, 23);
 			this->downMenu_ChannelsButton->TabIndex = 0;
 			this->downMenu_ChannelsButton->Text = L"Channels";
+			this->downMenu_ChannelsButton->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->downMenu_ChannelsButton->UseVisualStyleBackColor = true;
 			// 
 			// downMenu_AcquireButton
 			// 
-			this->downMenu_AcquireButton->Location = System::Drawing::Point(273, 476);
+			this->downMenu_AcquireButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"downMenu_AcquireButton.Image")));
+			this->downMenu_AcquireButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->downMenu_AcquireButton->Location = System::Drawing::Point(269, 476);
 			this->downMenu_AcquireButton->Name = L"downMenu_AcquireButton";
-			this->downMenu_AcquireButton->Size = System::Drawing::Size(75, 23);
+			this->downMenu_AcquireButton->Size = System::Drawing::Size(79, 23);
 			this->downMenu_AcquireButton->TabIndex = 1;
 			this->downMenu_AcquireButton->Text = L"Acquire";
+			this->downMenu_AcquireButton->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->downMenu_AcquireButton->UseVisualStyleBackColor = true;
 			// 
 			// downMenu_TriggerButton
 			// 
+			this->downMenu_TriggerButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"downMenu_TriggerButton.Image")));
+			this->downMenu_TriggerButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			this->downMenu_TriggerButton->Location = System::Drawing::Point(354, 476);
 			this->downMenu_TriggerButton->Name = L"downMenu_TriggerButton";
-			this->downMenu_TriggerButton->Size = System::Drawing::Size(75, 23);
+			this->downMenu_TriggerButton->Size = System::Drawing::Size(79, 23);
 			this->downMenu_TriggerButton->TabIndex = 2;
 			this->downMenu_TriggerButton->Text = L"Trigger";
+			this->downMenu_TriggerButton->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->downMenu_TriggerButton->UseVisualStyleBackColor = true;
 			// 
 			// downMenu_DisplayButton
 			// 
-			this->downMenu_DisplayButton->Location = System::Drawing::Point(435, 476);
+			this->downMenu_DisplayButton->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"downMenu_DisplayButton.Image")));
+			this->downMenu_DisplayButton->ImageAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->downMenu_DisplayButton->Location = System::Drawing::Point(439, 476);
 			this->downMenu_DisplayButton->Name = L"downMenu_DisplayButton";
-			this->downMenu_DisplayButton->Size = System::Drawing::Size(75, 23);
+			this->downMenu_DisplayButton->Size = System::Drawing::Size(79, 23);
 			this->downMenu_DisplayButton->TabIndex = 3;
 			this->downMenu_DisplayButton->Text = L"Display";
+			this->downMenu_DisplayButton->TextAlign = System::Drawing::ContentAlignment::MiddleRight;
 			this->downMenu_DisplayButton->UseVisualStyleBackColor = true;
 			// 
 			// GUI

@@ -130,6 +130,12 @@
       <DependentUpon>GUI.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\acquire.png" />
+    <Image Include="..\..\..\..\Downloads\channels.png" />
+    <Image Include="..\..\..\..\Downloads\display.png" />
+    <Image Include="..\..\..\..\Downloads\trigger.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
