@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\downMenu">
+      <UniqueIdentifier>{1a6000cc-7fa9-4d57-9fa7-eb24ac20d496}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GUI.cpp">
@@ -23,5 +26,19 @@
     <ClInclude Include="GUI.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\trigger.png">
+      <Filter>Resource Files\downMenu</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\acquire.png">
+      <Filter>Resource Files\downMenu</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\channels.png">
+      <Filter>Resource Files\downMenu</Filter>
+    </Image>
+    <Image Include="..\..\..\..\Downloads\display.png">
+      <Filter>Resource Files\downMenu</Filter>
+    </Image>
   </ItemGroup>
 </Project>
