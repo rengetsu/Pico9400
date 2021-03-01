@@ -40,5 +40,8 @@
     <Image Include="..\..\..\..\Downloads\display.png">
       <Filter>Resource Files\downMenu</Filter>
     </Image>
+    <Image Include="..\..\..\..\Downloads\screen_image_off.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
