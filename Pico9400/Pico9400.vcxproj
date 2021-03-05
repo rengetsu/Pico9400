@@ -119,12 +119,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Screen.cpp" />
     <ClCompile Include="Tabs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GUI.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Screen.h" />
     <ClInclude Include="Tabs.h" />
   </ItemGroup>
   <ItemGroup>
