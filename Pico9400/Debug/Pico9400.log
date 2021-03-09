@@ -1,4 +1,7 @@
 ﻿  GUI.cpp
 C:\Users\Rengetsu\source\repos\Pico9400\Pico9400\GUI.cpp(10,15): warning C4551: function call missing argument list
+  Screen.cpp
+  Tabs.cpp
+  Generating Code...
   GUI.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Pico9400.vcxproj -> C:\Users\Rengetsu\source\repos\Pico9400\Debug\Pico9400.exe
