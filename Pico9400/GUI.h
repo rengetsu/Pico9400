@@ -40,6 +40,10 @@ namespace Pico9400 {
 	private: System::Windows::Forms::Button^ downMenu_TriggerButton;
 	private: System::Windows::Forms::Button^ downMenu_DisplayButton;
 	private: System::Windows::Forms::PictureBox^ screenPicture;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::PictureBox^ pictureBox2;
+	private: System::Windows::Forms::PictureBox^ pictureBox3;
 
 
 
@@ -62,7 +66,13 @@ namespace Pico9400 {
 			this->downMenu_TriggerButton = (gcnew System::Windows::Forms::Button());
 			this->downMenu_DisplayButton = (gcnew System::Windows::Forms::Button());
 			this->screenPicture = (gcnew System::Windows::Forms::PictureBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->screenPicture))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// downMenu_ChannelsButton
@@ -122,11 +132,55 @@ namespace Pico9400 {
 			this->screenPicture->TabIndex = 4;
 			this->screenPicture->TabStop = false;
 			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(12, 502);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(75, 23);
+			this->button1->TabIndex = 5;
+			this->button1->Text = L"Ch1";
+			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &GUI::button1_Click);
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(94, 502);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->TabIndex = 6;
+			this->button2->Text = L"Ch2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &GUI::button2_Click);
+			// 
+			// pictureBox2
+			// 
+			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
+			this->pictureBox2->Location = System::Drawing::Point(12, 12);
+			this->pictureBox2->Name = L"pictureBox2";
+			this->pictureBox2->Size = System::Drawing::Size(1210, 470);
+			this->pictureBox2->TabIndex = 8;
+			this->pictureBox2->TabStop = false;
+			this->pictureBox2->Visible = false;
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(12, 12);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(1210, 470);
+			this->pictureBox3->TabIndex = 9;
+			this->pictureBox3->TabStop = false;
+			this->pictureBox3->Visible = false;
+			// 
 			// GUI
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1232, 621);
+			this->Controls->Add(this->pictureBox3);
+			this->Controls->Add(this->pictureBox2);
+			this->Controls->Add(this->button2);
+			this->Controls->Add(this->button1);
 			this->Controls->Add(this->screenPicture);
 			this->Controls->Add(this->downMenu_DisplayButton);
 			this->Controls->Add(this->downMenu_TriggerButton);
@@ -135,9 +189,19 @@ namespace Pico9400 {
 			this->Name = L"GUI";
 			this->Text = L"GUI";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->screenPicture))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		pictureBox2->Visible = true;
+		pictureBox3->Visible = false;
+	}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	pictureBox2->Visible = false;
+	pictureBox3->Visible = true;
+}
+};
 }
