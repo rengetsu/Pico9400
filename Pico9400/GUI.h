@@ -8,6 +8,7 @@ namespace Pico9400 {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Diagnostics;
 
 	/// <summary>
 	/// Summary for GUI
@@ -44,6 +45,7 @@ namespace Pico9400 {
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::PictureBox^ pictureBox2;
 	private: System::Windows::Forms::PictureBox^ pictureBox3;
+	private: System::Windows::Forms::Button^ button3;
 
 
 
@@ -70,6 +72,7 @@ namespace Pico9400 {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->screenPicture))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -172,11 +175,22 @@ namespace Pico9400 {
 			this->pictureBox3->TabStop = false;
 			this->pictureBox3->Visible = false;
 			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(233, 502);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(75, 23);
+			this->button3->TabIndex = 10;
+			this->button3->Text = L"Out of Demo";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &GUI::button3_Click);
+			// 
 			// GUI
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1232, 621);
+			this->Controls->Add(this->button3);
 			this->Controls->Add(this->pictureBox3);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->button2);
@@ -202,6 +216,9 @@ namespace Pico9400 {
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	pictureBox2->Visible = false;
 	pictureBox3->Visible = true;
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	Process::Start("");
 }
 };
 }
