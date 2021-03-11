@@ -7,4 +7,5 @@ At the moment, it is under development, while only the graphical interface is be
 
 ## Important note
 This is a project that contains only that part of the code that is responsible for managing the graphical user interface!
-All the code responsible for working with the hardware program is removed here. 
+
+All the code responsible for working with the hardware program is removed here!
